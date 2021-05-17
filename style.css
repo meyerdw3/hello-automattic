@@ -1,5 +1,11 @@
+/* Major element styling */
 body {
     background-color: rgb(145, 184, 228);
+}
+
+p, h1{
+    margin: 20px;
+    text-align: justify;
 }
 
 /* Style the button that is used to open and close the collapsible content */
@@ -8,11 +14,13 @@ body {
     color: white;
     cursor: pointer;
     padding: 18px;
-    width: 100%;
+    width: 70%;
     border: none;
     text-align: left;
     outline: none;
     font-size: 15px;
+    display: block;
+    margin: auto;
 }
 
 .collapsible:after {
@@ -34,10 +42,23 @@ background-color: #444;
 
 /* Style the collapsible content. Note: hidden by default */
 .content {
-padding: 0 18px;
-background-color: #f1f1f1;
-max-height: 0;
-overflow: hidden;
-transition: max-height 0.2s ease-out;
-margin-bottom: 10px;
+    padding: 18 18px;
+    background-color: #f1f1f1;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+/* Style the intro and closing content */
+#intro, #closing {
+    padding: 30 30px;
+    background-color: #f1f1f1;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
 }
