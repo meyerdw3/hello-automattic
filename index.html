@@ -21,13 +21,17 @@
 <head>
 	<title>Hey Automattic!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="style.css" rel="stylesheet">
-    <script src="js/collapsible-section.js" defer></script>
+    <!-- <link href="style.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
+
+<div class="container">
     <!-- Introduction -->
-    <div id="intro">
+    <div id="intro" class="panel-body">
         <h1>Hey Automattic!</h1>
         <p>I am so excited to be submitting my application to become a Technical Account Manager (TAM) at WordPress VIP!</p>
         <p>
@@ -57,130 +61,173 @@
     </div>
 
     <!-- Why I want to work with you -->
-    <button type="button" class="collapsible">Why do I want to work for you?</button>
-        <div id="why-you" class="content">
-            <p>
-                As I've embarked on pursuing my next career, I evaluate potential opportunities against a "corporate trifecta." 
-                The three limbs of which consist of the organizational culture and vision, the people that comprise the 
-                organization, and the clients and position responsibilities. I found that Automattic and, more specifically, 
-                WordPress VIP fulfill these requirements spectacularly, as I will expound upon below.
+    <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Collapsible Group 1</a>
+                </h4>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse">
+                <div id="why-you" class="panel-body">
+                    <p>
+                        As I've embarked on pursuing my next career, I evaluate potential opportunities against a "corporate trifecta." 
+                        The three limbs of which consist of the organizational culture and vision, the people that comprise the 
+                        organization, and the clients and position responsibilities. I found that Automattic and, more specifically, 
+                        WordPress VIP fulfill these requirements spectacularly, as I will expound upon below.
 
-            </p>
-            <p>
-                There are many reasons that I'm interested in joining the Automatticians, but one of the most important is that your 
-                company culture is rooted in a history of open-source and transparency. There is always something inspiring about any 
-                cause that attracts tens of thousands of people around the world to volunteer their time and expertise to the movement. 
-                I attribute much of Automattic success to its ability to make people around the world feel empowered in their work and
-                provide them the autonomy to pursue interesting problems. The result? WordPress.org has become the most successful web
-                design platform in the world, dramatically outpacing its commercial competitors.
-            </p>
-            <p>
-                Another important draw are the people themselves. As may not surprise you, both your employees and volunteers are 
-                prolific and honest in their descriptions of life as an Automattician. Much of what I have learned has come from the
-                WordPress slack instance, community forums, and individual blogs. I've also thoroughly enjoyed plowing through Matt's
-                podcast, <i>Distributed</i>, and learning about every facet of distributed work. What is immediately clear is that 
-                Automattic honors and empowers its people and the community members care deeply about each other. Who wouldn't want to
-                be a part of that?
-            </p>
-            <p>
-                The final edge of the corporate trifecta consists of the clients and position responsibilities. In this case, WordPress
-                VIP does not fail to impress. I thrive under pressure and purpose and the opportunity to collaborate with business leaders
-                around the world on complex, interesting problems make me vibrate with excitement. It's also clear that work will never be
-                linear or stale as every debug, expanded functionality, and site redesign is unique and brings with the opportunity to
-                learn and grow. That combination: incredible clients, engaging problems, and continual learning, is exactly what I want in
-                a career.
-            </p>
+                    </p>
+                    <p>
+                        There are many reasons that I'm interested in joining the Automatticians, but one of the most important is that your 
+                        company culture is rooted in a history of open-source and transparency. There is always something inspiring about any 
+                        cause that attracts tens of thousands of people around the world to volunteer their time and expertise to the movement. 
+                        I attribute much of Automattic success to its ability to make people around the world feel empowered in their work and
+                        provide them the autonomy to pursue interesting problems. The result? WordPress.org has become the most successful web
+                        design platform in the world, dramatically outpacing its commercial competitors.
+                    </p>
+                    <p>
+                        Another important draw are the people themselves. As may not surprise you, both your employees and volunteers are 
+                        prolific and honest in their descriptions of life as an Automattician. Much of what I have learned has come from the
+                        WordPress slack instance, community forums, and individual blogs. I've also thoroughly enjoyed plowing through Matt's
+                        podcast, <i>Distributed</i>, and learning about every facet of distributed work. What is immediately clear is that 
+                        Automattic honors and empowers its people and the community members care deeply about each other. Who wouldn't want to
+                        be a part of that?
+                    </p>
+                    <p>
+                        The final edge of the corporate trifecta consists of the clients and position responsibilities. In this case, WordPress
+                        VIP does not fail to impress. I thrive under pressure and purpose and the opportunity to collaborate with business leaders
+                        around the world on complex, interesting problems make me vibrate with excitement. It's also clear that work will never be
+                        linear or stale as every debug, expanded functionality, and site redesign is unique and brings with the opportunity to
+                        learn and grow. That combination: incredible clients, engaging problems, and continual learning, is exactly what I want in
+                        a career.
+                    </p>
+                </div>
+            </div>
         </div>
 
     <!-- Why you should want to work with me -->
-    <button type="button" class="collapsible">Why should you want me to work for you?</button>
-        <div id="why-me" class="content">
-            <p>
-                At first glance, my experience in software development, geology, and academic research suggests that I am primarily
-                a scientist (not a bad thing!). While my strong technical background is undeniable, it does not define me. Instead, I've
-                found that I am motivated by and thrive in work that requires building relationships and collaborating with others on 
-                complex problems. Automattic's combination of highly collaborative work and a globally dispersed workforce makes these
-                skills essential tools for every employee.
-            </p>
-            <p>
-                As the manager of a research lab at UCSD, fresh out of highschool, I built a student worker program and hired, trained, 
-                and supervised a 5 to 8-person team. I fostered a culture of creativity, transparency, and equity that empowered employees
-                to improvise process improvements and bound us together as a team with common purpose. It was incredible how, as the "shy 
-                kid" just months prior, I found this ability to connect with others and make a tangible impact on their lives.
-            </p>
-            <p>
-                In college, while completing dual technical degrees, I continued my managerial and leadership training as a resident
-                advisor (RA). The responsibility I most enjoyed were running social events for my residents that exposed them to new
-                activities and ideas or provided them a fun, safe environment to mingle and bond. The most impactful parts, however, were 
-                the handful of times I mentored residents through hardship, intervened in conflicts, and managed community emergencies.
-                Regardless of the task, however, this was an opportunity rooted in and driven by working with people and was incredibly
-                rewarding.
-            </p>
-            <p>
-                As an academic, in graduate school and at my current position, the success of my research has been dependent upon my
-                continuous collaboration with colleagues around the world. I had a core team at my institution that I worked with 
-                constantly. I reached out to external experts to visit their labs, train on their equipment, and incorporate that 
-                knowledge into my work. I participated in monthly meetings with 20+ attendees to exchange ideas and constructive 
-                criticism. I presented at international conferences in front of hundreds of people to spark new and interesting 
-                conversations. The need for power skills, such as networking, relationship building, and collaboration, has become a 
-                reality of modern science
-            </p>
-            <p>
-                For the past 14 years, I've thrived in a diverse set of roles that have honed my interpersonal skills, provided
-                me with extensive management experience, and made me an amiable and reliable collaborator. 
-            </p>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Collapsible Group 2</a>
+                </h4>
+            </div>
+            <div id="collapse2" class="panel-collapse collapse">     
+                <div id="why-me" class="panel-body">
+                    <p>
+                        At first glance, my experience in software development, geology, and academic research suggests that I am primarily
+                        a scientist (not a bad thing!). While my strong technical background is undeniable, it does not define me. Instead, I've
+                        found that I am motivated by and thrive in work that requires building relationships and collaborating with others on 
+                        complex problems. Automattic's combination of highly collaborative work and a globally dispersed workforce makes these
+                        skills essential tools for every employee.
+                    </p>
+                    <p>
+                        As the manager of a research lab at UCSD, fresh out of highschool, I built a student worker program and hired, trained, 
+                        and supervised a 5 to 8-person team. I fostered a culture of creativity, transparency, and equity that empowered employees
+                        to improvise process improvements and bound us together as a team with common purpose. It was incredible how, as the "shy 
+                        kid" just months prior, I found this ability to connect with others and make a tangible impact on their lives.
+                    </p>
+                    <p>
+                        In college, while completing dual technical degrees, I continued my managerial and leadership training as a resident
+                        advisor (RA). The responsibility I most enjoyed were running social events for my residents that exposed them to new
+                        activities and ideas or provided them a fun, safe environment to mingle and bond. The most impactful parts, however, were 
+                        the handful of times I mentored residents through hardship, intervened in conflicts, and managed community emergencies.
+                        Regardless of the task, however, this was an opportunity rooted in and driven by working with people and was incredibly
+                        rewarding.
+                    </p>
+                    <p>
+                        As an academic, in graduate school and at my current position, the success of my research has been dependent upon my
+                        continuous collaboration with colleagues around the world. I had a core team at my institution that I worked with 
+                        constantly. I reached out to external experts to visit their labs, train on their equipment, and incorporate that 
+                        knowledge into my work. I participated in monthly meetings with 20+ attendees to exchange ideas and constructive 
+                        criticism. I presented at international conferences in front of hundreds of people to spark new and interesting 
+                        conversations. The need for power skills, such as networking, relationship building, and collaboration, has become a 
+                        reality of modern science
+                    </p>
+                    <p>
+                        For the past 14 years, I've thrived in a diverse set of roles that have honed my interpersonal skills, provided
+                        me with extensive management experience, and made me an amiable and reliable collaborator. 
+                    </p>
+                </div>
+            </div>
         </div>
 
     <!-- What unique skills and novel mindset will I bring -->
-    <button type="button" class="collapsible">What are my essential skills?</button>
-        <div id="skills" class="content">
-            <p>
-                - Technical Professional
-                - Good collaborator
-                - Academic, learning mindset
-                - Global mentality
-                - Technical background
-                - Communicator
-                - Remote Experience
-            </p>
-            <p>
-                - Communication
-                - Problem solving
-                - 
-            </p>
-            <p>
-                I've also enjoyed the opportunity to gain international experience while working in a local research group in Taiwan since 2018. 
-                
-                On a final note, it is worth mentioning that I'm completely sold on the distributed organizational model. I've worked in a
-                semi-distributed fashion since 2012. I've enjoyed and been productive in
-            </p>
-            <p>
-                I've also had the unique opportunity to work with disadvantaged and culturally diverse communities through volunteering 
-                and movingto Taiwan in 2018.
-            </p>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Collapsible Group 3</a>
+                </h4>
+            </div>
+            <div id="collapse3" class="panel-collapse collapse">
+                <div id="skills" class="panel-body">
+                    <p>
+                        - Technical Professional
+                        - Good collaborator
+                        - Academic, learning mindset
+                        - Global mentality
+                        - Technical background
+                        - Communicator
+                        - Remote Experience
+                    </p>
+                    <p>
+                        - Communication
+                        - Problem solving
+                        - 
+                    </p>
+                    <p>
+                        I've also enjoyed the opportunity to gain international experience while working in a local research group in Taiwan since 2018. 
+                        
+                        On a final note, it is worth mentioning that I'm completely sold on the distributed organizational model. I've worked in a
+                        semi-distributed fashion since 2012. I've enjoyed and been productive in
+                    </p>
+                    <p>
+                        I've also had the unique opportunity to work with disadvantaged and culturally diverse communities through volunteering 
+                        and movingto Taiwan in 2018.
+                    </p>
+                </div>
+            </div>
         </div>
 
     <!-- What can I contribute -->
-    <button type="button" class="collapsible">How will I contribute to WordPress VIP and Automattic as a whole?</button>
-        <div id="contribution" class="content">
-            <p>
-                Test text.
-            </p>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Collapsible Group 4</a>
+                </h4>
+            </div>
+            <div id="collapse4" class="panel-collapse collapse"> 
+                <div id="contribution" class="content">
+                    <p>
+                        Test text.
+                    </p>
+                </div>
+            </div>
         </div>
 
     <!-- Other interesting information about me -->
-    <button type="button" class="collapsible">What are some other interesting things about me?</button>
-        <div id="other-fun-stuff" class="content">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">Collapsible Group 5</a>
+                </h4>
+            </div>
+            <div id="collapse5" class="panel-collapse collapse">
+                <div id="other-fun-stuff" class="content">
+                    <p>
+                        Test text.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    <!-- Closing comments -->
+        <div id="closing">
+            <h2>Thank you!</h2>
             <p>
                 Test text.
             </p>
         </div>
-
-    <!-- Closing comments -->
-    <div id="closing">
-        <h2>Thank you!</h2>
-        <p>
-            Test text.
-        </p>
     </div>
+</div>
 </body>
