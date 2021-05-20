@@ -7,6 +7,20 @@
 * #A1C6D7 - light blue
 */
 
+/* Global Styles */
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+h1,
+h2 {
+  margin: 0;
+  font-family: "Caveat", cursive;
+  font-weight: 400;
+}
+
 /* Introduction Styling */
 header {
   background-color: #2f3061;
