@@ -24,17 +24,17 @@
 <head>
 	<title>Hey Automattic!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link href="style.css" rel="stylesheet"> -->
     <link href="bootstrap_style.css" rel="stylesheet">
-    <script src="./js/jquery.js"></script>
-    <script src="./js/bootstrap.js"></script>
+    <link href="style.css" rel="stylesheet">
+    <script src="./js/jquery.js" defer></script>
+    <script src="./js/bootstrap.js" defer></script>
 </head>
 
 <body>
 
-<div class="container">
+<header>
     <!-- Introduction -->
-    <div id="intro" class="panel-body">
+    <div class="panel-body">
         <h1>Hey Automattic!</h1>
         <p>I am so excited to be submitting my application to become a Technical Account Manager (TAM) at WordPress VIP!</p>
         <p>
@@ -62,17 +62,19 @@
             fantastic asset to Automattic. Without further ado, I invite you to explore the sections below. Enjoy!
         </p>
     </div>
+</header>
 
-    <!-- Why I want to work with you -->
-    <div class="panel-group" id="accordion">
+<!-- Why I want to work with you -->
+<section class="why-you">
+    <div class="panel-group" id="accordion1">
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Collapsible Group 1</a>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Why You?</a>
                 </h4>
             </div>
             <div id="collapse1" class="panel-collapse collapse">
-                <div id="why-you" class="panel-body">
+                <div class="panel-body">
                     <p>
                         As I've embarked on pursuing my next career, I evaluate potential opportunities against a "corporate trifecta." 
                         The three limbs of which consist of the organizational culture and vision, the people that comprise the 
@@ -107,16 +109,20 @@
                 </div>
             </div>
         </div>
+    </div>
+</section>
 
-    <!-- Why you should want to work with me -->
+<!-- Why you should want to work with me -->
+<section class="why-me">
+    <div class="panel-group" id="accordion2">
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Collapsible Group 2</a>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Why Me?</a>
                 </h4>
             </div>
             <div id="collapse2" class="panel-collapse collapse">     
-                <div id="why-me" class="panel-body">
+                <div class="panel-body">
                     <p>
                         At first glance, my experience in software development, geology, and academic research suggests that I am primarily
                         a scientist (not a bad thing!). While my strong technical background is undeniable, it does not define me. Instead, I've
@@ -154,16 +160,20 @@
                 </div>
             </div>
         </div>
+    </div>
+</section>
 
-    <!-- What unique skills and novel mindset will I bring -->
+<!-- What unique skills and novel mindset will I bring -->
+<section class="skills">
+    <div class="panel-group" id="accordion3">
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Collapsible Group 3</a>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">My Unique Skills</a>
                 </h4>
             </div>
             <div id="collapse3" class="panel-collapse collapse">
-                <div id="skills" class="panel-body">
+                <div class="panel-body">
                     <p>
                         - Technical Professional
                         - Good collaborator
@@ -191,46 +201,68 @@
                 </div>
             </div>
         </div>
+    </div>
+</section>
 
-    <!-- What can I contribute -->
+<!-- What can I contribute -->
+<section class="contribution">
+    <div class="panel-group" id="accordion4">
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Collapsible Group 4</a>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">How I Can Contribute</a>
                 </h4>
             </div>
             <div id="collapse4" class="panel-collapse collapse"> 
-                <div id="contribution" class="content">
+                <div class="panel-body">
                     <p>
                         Test text.
                     </p>
                 </div>
             </div>
         </div>
+    </div>
+</section>
 
-    <!-- Other interesting information about me -->
+<!-- Other interesting information about me -->
+<section class="other-fun-stuff">
+    <div class="panel-group" id="accordion5">
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">Collapsible Group 5</a>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">Other Fun Things About Me</a>
                 </h4>
             </div>
             <div id="collapse5" class="panel-collapse collapse">
-                <div id="other-fun-stuff" class="content">
+                <div class="panel-body">
                     <p>
                         Test text.
                     </p>
                 </div>
             </div>
         </div>
-
-    <!-- Closing comments -->
-        <div id="closing">
-            <h2>Thank you!</h2>
-            <p>
-                Test text.
-            </p>
-        </div>
     </div>
-</div>
+</section>
+
+<!-- Closing comments -->
+<section class="closing panel-body">
+    <h2>Thank you!</h2>
+    <p>
+        Test text.
+    </p>
+</section>
+
+<footer>
+    <div class="content-wrap">
+        <h2>Let's Keep in Touch!</h2>
+
+        <!-- Social media and contact links. Add or remove any networks. -->
+        <ul class="contact-list">
+          <li><a href="mailto:email@example.com">email@example.com</a></li>
+          <li><a href="http://christinatruong.com" target="_blank">christinatruong.com</a></li>
+          <li><a href="http://twitter.com/christinatruong" target="_blank">Twitter</a></li>
+          <li><a href="#" target="_blank">LinkedIn</a></li>
+        </ul>
+      </div>
+</footer>
 </body>
