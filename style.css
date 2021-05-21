@@ -94,19 +94,25 @@ p.last {
   margin-top: 0;
 }
 
-.panel-title.collapsed:after {
-  content: "\02795"; /* Unicode character for "plus" sign (+) */
+.panel-title:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
   font-size: 20px;
-  color: white;
   float: right;
   margin-top: 7px;
   margin-right: 10px;
 }
 
-.panel-title:after {
-  content: "\2796"; /* Unicode character for "minus" sign (-) */
+.panel-title.collapsed:after {
+  content: "\02795"; /* Unicode character for "plus" sign (+) */
   font-size: 20px;
-  color: white;
+  float: right;
+  margin-top: 7px;
+  margin-right: 10px;
+}
+
+.panel-title.initial:after {
+  content: "\02795"; /* Unicode character for "plus" sign (+) */
+  font-size: 20px;
   float: right;
   margin-top: 7px;
   margin-right: 10px;

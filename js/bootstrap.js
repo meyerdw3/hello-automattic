@@ -437,6 +437,7 @@ if ("undefined" == typeof jQuery)
                 .attr("aria-expanded", !0),
                 this.$trigger
                   .removeClass("collapsed")
+                  .removeClass("initial")
                   .attr("aria-expanded", !0),
                 (this.transitioning = 1);
               var n = function () {
@@ -467,7 +468,7 @@ if ("undefined" == typeof jQuery)
                 .addClass("collapsing")
                 .removeClass("collapse in")
                 .attr("aria-expanded", !1),
-              this.$trigger.addClass("collapsed").attr("aria-expanded", !1),
+              this.$trigger.addClass("collapsed").removeClass("initial").attr("aria-expanded", !1),
               (this.transitioning = 1);
             var i = function () {
               (this.transitioning = 0),
