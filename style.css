@@ -11,45 +11,110 @@
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
+  color: black;
   line-height: 1.5;
-  background-color: #2f3061;
 }
 
-h1,
-h2 {
-  margin: 0 0 10px 20px;
+h1 {
+  font-size: 60px;
   font-family: "Caveat", cursive;
   font-weight: 600;
 }
 
-h2 a {
-  font-size: 30px;
+h2 {
+  font-family: "Caveat", cursive;
+  font-weight: 600;
+  font-size: 45px;
 }
 
+h1,
+h2,
 p,
-li {
-  margin-left: 20px;
+ul {
+  margin-left: auto;
   margin-right: auto;
-  max-width: 80%;
+  max-width: 70%;
 }
 
-/* Introduction Styling */
-header {
-  color: #f7fff7;
+p.first {
+  margin-top: 20px;
 }
+
+p.last {
+  margin-bottom: 60px;
+}
+
+/* Divider styling - currently don't have any */
+/* img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 20px;
+  padding-top: 10px;
+  max-width: 50%;
+} */
 
 /* General Panel Styling */
 .panel {
   border: none;
 }
 
+.panel-heading {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  padding: 0;
+  background-color: #c1ebff;
+}
+
+.panel-title {
+  font-size: 30px;
+  color: black;
+  padding: 15px 0px;
+  cursor: pointer;
+  max-width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.panel-body {
+  padding: 0;
+}
+
+.panel-group {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.panel-group .panel {
+  background-color: #b8baff;
+  border-radius: 0;
+}
+
 .panel-group .panel + .panel {
   margin-top: 0;
 }
 
-.panel-heading {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+.panel-title.collapsed:after {
+  content: "\02795"; /* Unicode character for "plus" sign (+) */
+  font-size: 20px;
+  color: white;
+  float: right;
+  margin-top: 7px;
+  margin-right: 10px;
+}
+
+.panel-title:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+  font-size: 20px;
+  color: white;
+  float: right;
+  margin-top: 7px;
+  margin-right: 10px;
+}
+
+/* Introduction Styling */
+header .panel-body {
+  background-color: thistle;
 }
 
 /* Why You Section Styling */
@@ -62,6 +127,10 @@ header {
   background-color: #ffe66d;
 }
 
+.why-you .panel-heading:hover {
+  background-color: #ffdb2a;
+}
+
 /* Why Me Section Styling */
 .why-me .panel-default > .panel-heading {
   background-color: #a1c6d7;
@@ -70,6 +139,10 @@ header {
 .why-me .panel-default > .panel-heading + .panel-collapse > .panel-body {
   border-top: none;
   background-color: #a1c6d7;
+}
+
+.why-me .panel-heading:hover {
+  background-color: #68b5d8;
 }
 
 /* Skills Section Styling */
@@ -82,6 +155,10 @@ header {
   background-color: #f7fff7;
 }
 
+.skills .panel-heading:hover {
+  background-color: #d4dbd4;
+}
+
 /* Contributions Section Styling */
 .contribution .panel-default > .panel-heading {
   background-color: #b7fabd;
@@ -90,6 +167,10 @@ header {
 .contribution .panel-default > .panel-heading + .panel-collapse > .panel-body {
   border-top: none;
   background-color: #b7fabd;
+}
+
+.contribution .panel-heading:hover {
+  background-color: #8bfd95;
 }
 
 /* Other Fun Stuff Section Styling */
@@ -106,25 +187,80 @@ header {
   background-color: #fccdd5;
 }
 
+.other-fun-stuff .panel-heading:hover {
+  background-color: #f89fae;
+}
+
 /* Closing Remarks Styling */
 .closing {
-  color: #f7fff7;
+  background-color: thistle;
 }
 
 /* Contact Info Styling */
 footer {
   background: #343434;
   color: #f7fff7;
-  padding: 15px;
+}
+
+footer .content-wrap {
+  padding: 60px 0;
+  max-width: 800px;
+  width: 85%;
+  margin: 0 auto;
+}
+
+h2.footer {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  padding: 10px 0;
 }
 
 .contact-list {
   list-style-type: none;
   padding: 0;
-  display: flex;
 }
 
 .contact-list a {
   padding: 15px;
-  border: 1px solid white;
+  display: inline-block;
+  color: #ffe66d;
+  text-decoration: underline;
+}
+
+.contact-list a:hover {
+  text-decoration: none;
+}
+
+.contact-list li {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Media Queries */
+@media screen and (min-width: 750px) {
+  footer {
+    text-align: center;
+  }
+
+  .contact-list {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  h1 {
+    font-size: 75px;
+    line-height: 0.9;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    line-height: 1;
+  }
+
+  .contact-list a {
+    padding: 5px;
+  }
 }
