@@ -16,9 +16,9 @@ body {
 }
 
 h1 {
-  font-size: 60px;
   font-family: "Caveat", cursive;
   font-weight: 600;
+  font-size: 60px;
 }
 
 h2 {
@@ -27,8 +27,15 @@ h2 {
   font-size: 45px;
 }
 
+h3 {
+  font-family: "Caveat", cursive;
+  font-weight: 600;
+  font-size: 30px;
+}
+
 h1,
 h2,
+h3,
 p,
 ul {
   margin-left: auto;
@@ -67,7 +74,7 @@ p.last {
 }
 
 .panel-title {
-  font-size: 30px;
+  font-size: 45px;
   color: black;
   padding: 15px 0px;
   cursor: pointer;
