@@ -105,7 +105,7 @@ p.last {
   content: "\2796"; /* Unicode character for "minus" sign (-) */
   font-size: 20px;
   float: right;
-  margin-top: 7px;
+  margin-top: 15px;
   margin-right: 10px;
 }
 
@@ -113,7 +113,7 @@ p.last {
   content: "\02795"; /* Unicode character for "plus" sign (+) */
   font-size: 20px;
   float: right;
-  margin-top: 7px;
+  margin-top: 15px;
   margin-right: 10px;
 }
 
@@ -121,7 +121,7 @@ p.last {
   content: "\02795"; /* Unicode character for "plus" sign (+) */
   font-size: 20px;
   float: right;
-  margin-top: 7px;
+  margin-top: 15px;
   margin-right: 10px;
 }
 
