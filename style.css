@@ -1,10 +1,23 @@
 /* 
 * COLOR PALETTE
-* #F7FFF7 - almost white
-* #343434 - dark gray, almost black
-* #2F3061 - dark blue
-* #FFE66D - yellow
-* #A1C6D7 - light blue
+* hsl(194, 100%, 95%) - blue 1 (intro)
+* hsl(194, 100%, 90%) - blue 2a (why-you)
+* hsl(194, 100%, 85%) - blue 2b (why-you:hover)
+* hsl(194, 100%, 80%) - blue 3a (why-me)
+* hsl(194, 100%, 75%) - blue 3b (why-me:hover)
+* hsl(194, 100%, 70%) - blue 4a (skills)
+* hsl(194, 100%, 65%) - blue 4b (skills:hover)
+* hsl(194, 100%, 60%) - blue 5a (contribution)
+* hsl(194, 100%, 55%) - blue 5b (contribution:hover)
+* hsl(194, 100%, 50%) - blue 6a (other-fun-stuff)
+* hsl(194, 100%, 45%) - blue 6b (other-fun-stuff:hover)
+* hsl(194, 100%, 15%) - blue 1 (footer)
+
+* #ED6A5A - red-orange
+* #F4F1BB - tan
+* #9BC1BC - blue-gray
+* #E6EBE0 - off-white
+* #36C9C6 - baby blue
 */
 
 /* Global Styles */
@@ -70,7 +83,6 @@ p.last {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   padding: 0;
-  background-color: #c1ebff;
 }
 
 .panel-title {
@@ -93,7 +105,6 @@ p.last {
 }
 
 .panel-group .panel {
-  background-color: #b8baff;
   border-radius: 0;
 }
 
@@ -127,68 +138,68 @@ p.last {
 
 /* Introduction Styling */
 header .panel-body {
-  background-color: thistle;
+  background-color: #d6b7b5;
 }
 
 /* Why You Section Styling */
 .why-you .panel-default > .panel-heading {
-  background-color: #ffe66d;
+  background-color: #ed6a5a;
 }
 
 .why-you .panel-default > .panel-heading + .panel-collapse > .panel-body {
   border-top: none;
-  background-color: #ffe66d;
+  background-color: #ed6a5a;
 }
 
 .why-you .panel-heading:hover {
-  background-color: #ffdb2a;
+  background-color: #e8422c;
 }
 
 /* Why Me Section Styling */
 .why-me .panel-default > .panel-heading {
-  background-color: #a1c6d7;
+  background-color: #f4f1bb;
 }
 
 .why-me .panel-default > .panel-heading + .panel-collapse > .panel-body {
   border-top: none;
-  background-color: #a1c6d7;
+  background-color: #f4f1bb;
 }
 
 .why-me .panel-heading:hover {
-  background-color: #68b5d8;
+  background-color: #ede991;
 }
 
 /* Skills Section Styling */
 .skills .panel-default > .panel-heading {
-  background-color: #f7fff7;
+  background-color: #9bc1bc;
 }
 
 .skills .panel-default > .panel-heading + .panel-collapse > .panel-body {
   border-top: none;
-  background-color: #f7fff7;
+  background-color: #9bc1bc;
 }
 
 .skills .panel-heading:hover {
-  background-color: #d4dbd4;
+  background-color: #7bada6;
 }
 
 /* Contributions Section Styling */
 .contribution .panel-default > .panel-heading {
-  background-color: #b7fabd;
+  background-color: #e6ebe0;
 }
 
 .contribution .panel-default > .panel-heading + .panel-collapse > .panel-body {
   border-top: none;
-  background-color: #b7fabd;
+  background-color: #e6ebe0;
 }
 
 .contribution .panel-heading:hover {
-  background-color: #8bfd95;
+  background-color: #cdd7c1;
 }
 
 /* Other Fun Stuff Section Styling */
 .other-fun-stuff .panel-default > .panel-heading {
-  background-color: #fccdd5;
+  background-color: #36c9c6;
 }
 
 .other-fun-stuff
@@ -197,22 +208,22 @@ header .panel-body {
   + .panel-collapse
   > .panel-body {
   border-top: none;
-  background-color: #fccdd5;
+  background-color: #36c9c6;
 }
 
 .other-fun-stuff .panel-heading:hover {
-  background-color: #f89fae;
+  background-color: #2ba19f;
 }
 
 /* Closing Remarks Styling */
 .closing {
-  background-color: thistle;
+  background-color: #d6b7b5;
 }
 
 /* Contact Info Styling */
 footer {
-  background: #343434;
-  color: #f7fff7;
+  background: hsl(197, 93%, 9%);
+  color: #f0f3bd;
 }
 
 footer .content-wrap {
@@ -237,7 +248,7 @@ h2.footer {
 .contact-list a {
   padding: 15px;
   display: inline-block;
-  color: #ffe66d;
+  color: hsl(194, 100%, 95%);
   text-decoration: underline;
 }
 
