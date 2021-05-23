@@ -1,5 +1,7 @@
 /* 
-* COLOR PALETTE
+* COLOR PALETTES
+
+* -- BLUE GRADIENT --
 * hsl(194, 100%, 95%) - blue 1 (intro)
 * hsl(194, 100%, 90%) - blue 2a (why-you)
 * hsl(194, 100%, 85%) - blue 2b (why-you:hover)
@@ -9,10 +11,11 @@
 * hsl(194, 100%, 65%) - blue 4b (skills:hover)
 * hsl(194, 100%, 60%) - blue 5a (contribution)
 * hsl(194, 100%, 55%) - blue 5b (contribution:hover)
-* hsl(194, 100%, 50%) - blue 6a (other-fun-stuff)
-* hsl(194, 100%, 45%) - blue 6b (other-fun-stuff:hover)
+* hsl(194, 100%, 50%) - blue 6a (other-stuff)
+* hsl(194, 100%, 45%) - blue 6b (other-stuff:hover)
 * hsl(194, 100%, 15%) - blue 1 (footer)
 
+* -- MULTI-PASTEL --
 * #ED6A5A - red-orange
 * #F4F1BB - tan
 * #9BC1BC - blue-gray
@@ -20,11 +23,34 @@
 * #36C9C6 - baby blue
 */
 
+/* Root Variable Declaration */
+:root {
+  --main-background: #d6b7b5;
+  --main-text-color: #141414;
+  --panel-one: #ed6a5a;
+  --panel-one-hover: #e8422c;
+  --panel-one-text: #141414;
+  --panel-two: #f4f1bb;
+  --panel-two-hover: #ede991;
+  --panel-two-text: #141414;
+  --panel-three: #9bc1bc;
+  --panel-three-hover: #7bada6;
+  --panel-three-text: #141414;
+  --panel-four: #e6ebe0;
+  --panel-four-hover: #cdd7c1;
+  --panel-onfoure-text: #141414;
+  --panel-five: #36c9c6;
+  --panel-five-hover: #2ba19f;
+  --panel-five-text: #141414;
+  --footer: #003b4d;
+  --footer-text: #f0f3bd;
+}
+
 /* Global Styles */
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
-  color: black;
+  color: var(--main-text-color);
   line-height: 1.5;
 }
 
@@ -87,12 +113,29 @@ p.last {
 
 .panel-title {
   font-size: 45px;
-  color: black;
   padding: 15px 0px;
   cursor: pointer;
   max-width: 70%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.panel-title::after {
+  content: "-";
+  font-size: 45px;
+  float: right;
+}
+
+.panel-title.collapsed::after {
+  content: "+";
+  font-size: 45px;
+  float: right;
+}
+
+.panel-title.initial::after {
+  content: "+";
+  font-size: 45px;
+  float: right;
 }
 
 .panel-body {
@@ -112,118 +155,130 @@ p.last {
   margin-top: 0;
 }
 
-.panel-title:after {
-  content: "\2796"; /* Unicode character for "minus" sign (-) */
-  font-size: 20px;
-  float: right;
-  margin-top: 15px;
-  margin-right: 10px;
-}
-
-.panel-title.collapsed:after {
-  content: "\02795"; /* Unicode character for "plus" sign (+) */
-  font-size: 20px;
-  float: right;
-  margin-top: 15px;
-  margin-right: 10px;
-}
-
-.panel-title.initial:after {
-  content: "\02795"; /* Unicode character for "plus" sign (+) */
-  font-size: 20px;
-  float: right;
-  margin-top: 15px;
-  margin-right: 10px;
-}
-
 /* Introduction Styling */
 header .panel-body {
-  background-color: #d6b7b5;
+  background-color: var(--main-background);
 }
 
 /* Why You Section Styling */
+.why-you .panel-title,
+.why-you .panel-title::after,
+.why-you .panel-title.initial::after,
+.why-you .panel-title.collapsed::after {
+  color: var(--panel-one-text);
+}
+
 .why-you .panel-default > .panel-heading {
-  background-color: #ed6a5a;
+  background-color: var(--panel-one);
 }
 
 .why-you .panel-default > .panel-heading + .panel-collapse > .panel-body {
   border-top: none;
-  background-color: #ed6a5a;
+  background-color: var(--panel-one);
+  color: var(--panel-one-text);
 }
 
 .why-you .panel-heading:hover {
-  background-color: #e8422c;
+  background-color: var(--panel-one-hover);
 }
 
 /* Why Me Section Styling */
+.why-me .panel-title,
+.why-me .panel-title::after,
+.why-me .panel-title.initial::after,
+.why-me .panel-title.collapsed::after {
+  color: var(--panel-one-text);
+}
+
 .why-me .panel-default > .panel-heading {
-  background-color: #f4f1bb;
+  background-color: var(--panel-two);
 }
 
 .why-me .panel-default > .panel-heading + .panel-collapse > .panel-body {
   border-top: none;
-  background-color: #f4f1bb;
+  background-color: var(--panel-two);
+  color: var(--panel-two-text);
 }
 
 .why-me .panel-heading:hover {
-  background-color: #ede991;
+  background-color: var(--panel-two-hover);
 }
 
 /* Skills Section Styling */
+.skills .panel-title,
+.skills .panel-title::after,
+.skills .panel-title.initial::after,
+.skills .panel-title.collapsed::after {
+  color: var(--panel-one-text);
+}
+
 .skills .panel-default > .panel-heading {
-  background-color: #9bc1bc;
+  background-color: var(--panel-three);
 }
 
 .skills .panel-default > .panel-heading + .panel-collapse > .panel-body {
   border-top: none;
-  background-color: #9bc1bc;
+  background-color: var(--panel-three);
+  color: var(--panel-three-text);
 }
 
 .skills .panel-heading:hover {
-  background-color: #7bada6;
+  background-color: var(--panel-three-hover);
 }
 
 /* Contributions Section Styling */
+.contribution .panel-title,
+.contribution .panel-title::after,
+.contribution .panel-title.initial::after,
+.contribution .panel-title.collapsed::after {
+  color: var(--panel-one-text);
+}
+
 .contribution .panel-default > .panel-heading {
-  background-color: #e6ebe0;
+  background-color: var(--panel-four);
 }
 
 .contribution .panel-default > .panel-heading + .panel-collapse > .panel-body {
   border-top: none;
-  background-color: #e6ebe0;
+  background-color: var(--panel-four);
+  color: var(--panel-four-text);
 }
 
 .contribution .panel-heading:hover {
-  background-color: #cdd7c1;
+  background-color: var(--panel-four-hover);
 }
 
 /* Other Fun Stuff Section Styling */
-.other-fun-stuff .panel-default > .panel-heading {
-  background-color: #36c9c6;
+.other-stuff .panel-title,
+.other-stuff .panel-title::after,
+.other-stuff .panel-title.initial::after,
+.other-stuff .panel-title.collapsed::after {
+  color: var(--panel-one-text);
 }
 
-.other-fun-stuff
-  .panel-default
-  > .panel-heading
-  + .panel-collapse
-  > .panel-body {
+.other-stuff .panel-default > .panel-heading {
+  background-color: var(--panel-five);
+}
+
+.other-stuff .panel-default > .panel-heading + .panel-collapse > .panel-body {
   border-top: none;
-  background-color: #36c9c6;
+  background-color: var(--panel-five);
+  color: var(--panel-five-text);
 }
 
-.other-fun-stuff .panel-heading:hover {
-  background-color: #2ba19f;
+.other-stuff .panel-heading:hover {
+  background-color: var(--panel-five-hover);
 }
 
 /* Closing Remarks Styling */
 .closing {
-  background-color: #d6b7b5;
+  background-color: var(--main-background);
 }
 
 /* Contact Info Styling */
 footer {
   background: hsl(197, 93%, 9%);
-  color: #f0f3bd;
+  color: var(--footer-text);
 }
 
 footer .content-wrap {
@@ -248,7 +303,7 @@ h2.footer {
 .contact-list a {
   padding: 15px;
   display: inline-block;
-  color: hsl(194, 100%, 95%);
+  color: var(--footer-text);
   text-decoration: underline;
 }
 
