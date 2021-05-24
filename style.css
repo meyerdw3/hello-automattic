@@ -90,15 +90,33 @@ p.last {
   margin-bottom: 60px;
 }
 
-/* Divider styling - currently don't have any */
-/* img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 20px;
-  padding-top: 10px;
-  max-width: 50%;
-} */
+/* Button Styling */
+#expand_collapse_button {
+  /* Sticky */
+  position: sticky;
+  top: 20px;
+
+  /* Display */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: right;
+  height: 40px;
+  width: 80px;
+  margin-top: 18px;
+  margin-right: 20px;
+  border: 1px solid var(--main-text-color);
+  background-color: hsla(0, 0%, 0%, 0%);
+  cursor: pointer;
+
+  /* Font */
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1.7rem;
+  color: var(--main-text-color);
+  text-align: center;
+}
 
 /* General Panel Styling */
 .panel {
