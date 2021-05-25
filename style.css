@@ -21,29 +21,36 @@
 * #9BC1BC - blue-gray
 * #E6EBE0 - off-white
 * #36C9C6 - baby blue
+
+* -- MULTI-BLUE --
+* #3C659F - main background
+* #DAE3E5 - light (panel 1 & 5 + main & footer text)
+* #BBD1EA - mid
+* #A1C6EA - dark
+* #04080F - darkest (footer + panel text)
 */
 
 /* Root Variable Declaration */
 :root {
-  --main-background: #d6b7b5;
-  --main-text-color: #141414;
-  --panel-one: #ed6a5a;
-  --panel-one-hover: #e8422c;
-  --panel-one-text: #141414;
-  --panel-two: #f4f1bb;
-  --panel-two-hover: #ede991;
-  --panel-two-text: #141414;
-  --panel-three: #9bc1bc;
-  --panel-three-hover: #7bada6;
-  --panel-three-text: #141414;
-  --panel-four: #e6ebe0;
-  --panel-four-hover: #cdd7c1;
-  --panel-onfoure-text: #141414;
-  --panel-five: #36c9c6;
-  --panel-five-hover: #2ba19f;
-  --panel-five-text: #141414;
-  --footer: #003b4d;
-  --footer-text: #f0f3bd;
+  --main-background: #3c659f;
+  --main-text-color: #dae3e5;
+  --panel-one: #dae3e5;
+  --panel-one-hover: #bdcdd0;
+  --panel-one-text: #04080f;
+  --panel-two: #bbd1ea;
+  --panel-two-hover: #96b8df;
+  --panel-two-text: #04080f;
+  --panel-three: #a1c6ea;
+  --panel-three-hover: #76abe0;
+  --panel-three-text: #04080f;
+  --panel-four: #bbd1ea;
+  --panel-four-hover: #96b8df;
+  --panel-four-text: #04080f;
+  --panel-five: #dae3e5;
+  --panel-five-hover: #bdcdd0;
+  --panel-five-text: #04080f;
+  --footer: #04080f;
+  --footer-text: #dae3e5;
 }
 
 /* Global Styles */
@@ -101,21 +108,32 @@ p.last {
   justify-content: center;
   align-items: center;
   float: right;
-  height: 40px;
-  width: 80px;
-  margin-top: 18px;
+  height: 50px;
+  width: 90px;
+  margin-top: 14px;
   margin-right: 20px;
-  border: 1px solid var(--main-text-color);
-  background-color: hsla(0, 0%, 0%, 0%);
+  border: 2px solid var(--main-background);
+  background-color: var(--panel-one);
   cursor: pointer;
+  border-radius: 10px;
 
   /* Font */
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 15px;
   line-height: 1.7rem;
-  color: var(--main-text-color);
+  color: var(--main-background);
   text-align: center;
+}
+
+#expand_collapse_button:hover {
+  background-color: var(--main-background);
+  color: var(--main-text-color);
+}
+
+#expand_collapse_button:active {
+  background-color: hsla(0, 0%, 0%, 0%);
+  color: var(--main-background);
 }
 
 /* General Panel Styling */
