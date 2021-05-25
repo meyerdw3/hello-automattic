@@ -32,8 +32,8 @@
 
 /* Root Variable Declaration */
 :root {
-  --main-background: #3c659f;
-  --main-text-color: #dae3e5;
+  --main-background: #bbd1ea;
+  --main-text-color: #04080f;
   --panel-one: #dae3e5;
   --panel-one-hover: #bdcdd0;
   --panel-one-text: #04080f;
@@ -115,7 +115,7 @@ p.last {
   width: 90px;
   margin-top: 14px;
   margin-right: 20px;
-  border: 2px solid var(--main-background);
+  border: 2px solid var(--main-text-color);
   background-color: var(--panel-one);
   cursor: pointer;
   border-radius: 10px;
@@ -125,18 +125,18 @@ p.last {
   font-weight: 600;
   font-size: 15px;
   line-height: 1.7rem;
-  color: var(--main-background);
+  color: var(--main-text-color);
   text-align: center;
 }
 
 #expand_collapse_button:hover {
-  background-color: var(--main-background);
-  color: var(--main-text-color);
+  background-color: var(--main-text-color);
+  color: var(--main-background);
 }
 
 #expand_collapse_button:active {
   background-color: hsla(0, 0%, 0%, 0%);
-  color: var(--main-background);
+  color: var(--main-text-color);
 }
 
 /* General Panel Styling */
