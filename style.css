@@ -80,6 +80,15 @@ ul {
   max-width: 70%;
 }
 
+a {
+  color: var(--main-text-color);
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
 h1 {
   font-size: 60px;
 }
