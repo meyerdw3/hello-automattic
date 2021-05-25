@@ -11,8 +11,8 @@
 * hsl(194, 100%, 65%) - blue 4b (skills:hover)
 * hsl(194, 100%, 60%) - blue 5a (contribution)
 * hsl(194, 100%, 55%) - blue 5b (contribution:hover)
-* hsl(194, 100%, 50%) - blue 6a (other-stuff)
-* hsl(194, 100%, 45%) - blue 6b (other-stuff:hover)
+* hsl(194, 100%, 50%) - blue 6a (personal)
+* hsl(194, 100%, 45%) - blue 6b (personal:hover)
 * hsl(194, 100%, 15%) - blue 1 (footer)
 
 * -- MULTI-PASTEL --
@@ -51,42 +51,45 @@
   --panel-five-text: #04080f;
   --footer: #04080f;
   --footer-text: #dae3e5;
+  --body-font: "Montserrat", sans-serif;
+  --fancy-font: "Caveat", cursive;
 }
 
 /* Global Styles */
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--body-font);
   font-size: 15px;
   color: var(--main-text-color);
   line-height: 1.5;
 }
 
-h1 {
-  font-family: "Caveat", cursive;
-  font-weight: 600;
-  font-size: 60px;
-}
-
-h2 {
-  font-family: "Caveat", cursive;
-  font-weight: 600;
-  font-size: 45px;
-}
-
-h3 {
-  font-family: "Caveat", cursive;
-  font-weight: 600;
-  font-size: 30px;
-}
-
 h1,
 h2,
-h3,
+h3 {
+  font-family: var(--fancy-font);
+  font-weight: 600;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 70%;
+}
+
 p,
 ul {
   margin-left: auto;
   margin-right: auto;
   max-width: 70%;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 45px;
+}
+
+h3 {
+  font-size: 30px;
 }
 
 p.first {
@@ -118,7 +121,7 @@ p.last {
   border-radius: 10px;
 
   /* Font */
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--body-font);
   font-weight: 600;
   font-size: 15px;
   line-height: 1.7rem;
@@ -285,24 +288,24 @@ header .panel-body {
 }
 
 /* Other Fun Stuff Section Styling */
-.other-stuff .panel-title,
-.other-stuff .panel-title::after,
-.other-stuff .panel-title.initial::after,
-.other-stuff .panel-title.collapsed::after {
+.personal .panel-title,
+.personal .panel-title::after,
+.personal .panel-title.initial::after,
+.personal .panel-title.collapsed::after {
   color: var(--panel-one-text);
 }
 
-.other-stuff .panel-default > .panel-heading {
+.personal .panel-default > .panel-heading {
   background-color: var(--panel-five);
 }
 
-.other-stuff .panel-default > .panel-heading + .panel-collapse > .panel-body {
+.personal .panel-default > .panel-heading + .panel-collapse > .panel-body {
   border-top: none;
   background-color: var(--panel-five);
   color: var(--panel-five-text);
 }
 
-.other-stuff .panel-heading:hover {
+.personal .panel-heading:hover {
   background-color: var(--panel-five-hover);
 }
 
