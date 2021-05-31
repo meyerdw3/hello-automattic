@@ -58,9 +58,11 @@
 /* Global Styles */
 body {
   font-family: var(--body-font);
+  font-family: var(--body-font);
   font-size: 15px;
-  color: var(--main-text-color);
   line-height: 1.5;
+  color: var(--main-text-color);
+  background-color: var(--main-background);
 }
 
 h1,
@@ -80,15 +82,6 @@ ul {
   max-width: 70%;
 }
 
-a {
-  color: var(--main-text-color);
-  text-decoration: underline;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
 h1 {
   font-size: 60px;
 }
@@ -101,6 +94,15 @@ h3 {
   font-size: 30px;
 }
 
+a {
+  color: var(--main-text-color);
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
 p.first {
   margin-top: 20px;
 }
@@ -109,7 +111,7 @@ p.last {
   margin-bottom: 60px;
 }
 
-/* Button Styling */
+/* Expand/Collapse Button Styling */
 #expand_collapse_button {
   /* Sticky */
   position: sticky;
@@ -149,16 +151,19 @@ p.last {
 }
 
 /* General Panel Styling */
+/* Panel Background */
 .panel {
   border: none;
 }
 
+/* Panel Headings */
 .panel-heading {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   padding: 0;
 }
 
+/* Panel Title */
 .panel-title {
   font-size: 45px;
   padding: 15px 0px;
@@ -174,153 +179,109 @@ p.last {
   float: right;
 }
 
-.panel-title.collapsed::after {
-  content: "+";
-  font-size: 45px;
-  float: right;
-}
-
+.panel-title.collapsed::after,
 .panel-title.initial::after {
   content: "+";
-  font-size: 45px;
-  float: right;
 }
 
+/* Panel Body */
 .panel-body {
   padding: 0;
 }
 
-.panel-group {
-  margin-bottom: 0;
-  border-bottom: none;
-}
-
-.panel-group .panel {
-  border-radius: 0;
-}
-
-.panel-group .panel + .panel {
-  margin-top: 0;
-}
-
-/* Introduction Styling */
-header .panel-body {
-  background-color: var(--main-background);
-}
-
-/* Why You Section Styling */
-.why-you .panel-title,
-.why-you .panel-title::after,
-.why-you .panel-title.initial::after,
-.why-you .panel-title.collapsed::after {
+/* WHY YOU SECTION */
+.why-you .panel-title {
   color: var(--panel-one-text);
 }
 
-.why-you .panel-default > .panel-heading {
+.why-you .panel-heading {
   background-color: var(--panel-one);
-}
-
-.why-you .panel-default > .panel-heading + .panel-collapse > .panel-body {
-  border-top: none;
-  background-color: var(--panel-one);
-  color: var(--panel-one-text);
 }
 
 .why-you .panel-heading:hover {
   background-color: var(--panel-one-hover);
 }
 
-/* Why Me Section Styling */
-.why-me .panel-title,
-.why-me .panel-title::after,
-.why-me .panel-title.initial::after,
-.why-me .panel-title.collapsed::after {
+.why-you .panel-heading + .panel-collapse .panel-body {
+  border-top: none;
+  background-color: var(--panel-one);
   color: var(--panel-one-text);
 }
 
-.why-me .panel-default > .panel-heading {
-  background-color: var(--panel-two);
+/* WHY ME SECTION */
+.why-me .panel-title {
+  color: var(--panel-two-text);
 }
 
-.why-me .panel-default > .panel-heading + .panel-collapse > .panel-body {
-  border-top: none;
+.why-me .panel-heading {
   background-color: var(--panel-two);
-  color: var(--panel-two-text);
 }
 
 .why-me .panel-heading:hover {
   background-color: var(--panel-two-hover);
 }
 
-/* Skills Section Styling */
-.skills .panel-title,
-.skills .panel-title::after,
-.skills .panel-title.initial::after,
-.skills .panel-title.collapsed::after {
-  color: var(--panel-one-text);
-}
-
-.skills .panel-default > .panel-heading {
-  background-color: var(--panel-three);
-}
-
-.skills .panel-default > .panel-heading + .panel-collapse > .panel-body {
+.why-me .panel-heading + .panel-collapse .panel-body {
   border-top: none;
-  background-color: var(--panel-three);
+  background-color: var(--panel-two);
+  color: var(--panel-two-text);
+}
+
+/* SKILLS SECTION */
+.skills .panel-title {
   color: var(--panel-three-text);
+}
+
+.skills .panel-heading {
+  background-color: var(--panel-three);
 }
 
 .skills .panel-heading:hover {
   background-color: var(--panel-three-hover);
 }
 
-/* Contributions Section Styling */
-.contribution .panel-title,
-.contribution .panel-title::after,
-.contribution .panel-title.initial::after,
-.contribution .panel-title.collapsed::after {
-  color: var(--panel-one-text);
-}
-
-.contribution .panel-default > .panel-heading {
-  background-color: var(--panel-four);
-}
-
-.contribution .panel-default > .panel-heading + .panel-collapse > .panel-body {
+.skills .panel-heading + .panel-collapse .panel-body {
   border-top: none;
-  background-color: var(--panel-four);
+  background-color: var(--panel-three);
+  color: var(--panel-three-text);
+}
+
+/* CONTRIBUTION SECTION */
+.contribution .panel-title {
   color: var(--panel-four-text);
+}
+
+.contribution .panel-heading {
+  background-color: var(--panel-four);
 }
 
 .contribution .panel-heading:hover {
   background-color: var(--panel-four-hover);
 }
 
-/* Other Fun Stuff Section Styling */
-.personal .panel-title,
-.personal .panel-title::after,
-.personal .panel-title.initial::after,
-.personal .panel-title.collapsed::after {
-  color: var(--panel-one-text);
-}
-
-.personal .panel-default > .panel-heading {
-  background-color: var(--panel-five);
-}
-
-.personal .panel-default > .panel-heading + .panel-collapse > .panel-body {
+.contribution .panel-heading + .panel-collapse .panel-body {
   border-top: none;
-  background-color: var(--panel-five);
+  background-color: var(--panel-four);
+  color: var(--panel-four-text);
+}
+
+/* PERSONAL NOTE SECTION */
+.personal .panel-title {
   color: var(--panel-five-text);
+}
+
+.personal .panel-heading {
+  background-color: var(--panel-five);
 }
 
 .personal .panel-heading:hover {
   background-color: var(--panel-five-hover);
 }
 
-/* Closing Remarks Styling */
-.closing {
-  background-color: var(--main-background);
+.personal .panel-heading + .panel-collapse .panel-body {
+  border-top: none;
+  background-color: var(--panel-five);
+  color: var(--panel-five-text);
 }
 
 /* Contact Info Styling */
@@ -336,16 +297,14 @@ footer .content-wrap {
   margin: 0 auto;
 }
 
-h2.footer {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 0;
-  padding: 10px 0;
-}
-
 .contact-list {
   list-style-type: none;
   padding: 0;
+}
+
+.contact-list li {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .contact-list a {
@@ -357,11 +316,6 @@ h2.footer {
 
 .contact-list a:hover {
   text-decoration: none;
-}
-
-.contact-list li {
-  margin-left: 0;
-  margin-right: 0;
 }
 
 /* Media Queries */
@@ -378,7 +332,6 @@ h2.footer {
 
 @media screen and (max-width: 749px) {
   h1 {
-    font-size: 75px;
     line-height: 0.9;
     margin-bottom: 20px;
   }
