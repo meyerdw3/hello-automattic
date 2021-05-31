@@ -38,7 +38,7 @@ function expand_collapse() {
         document.querySelector(".why-me .panel-title").classList.remove("initial", "collapsed")
         document.querySelector(".skills .panel-title").classList.remove("initial", "collapsed")
         document.querySelector(".contribution .panel-title").classList.remove("initial", "collapsed")
-        document.querySelector(".other-stuff .panel-title").classList.remove("initial", "collapsed")
+        document.querySelector(".personal .panel-title").classList.remove("initial", "collapsed")
     } 
     
     // If the panels have not all been collapsed, then collapse them all
@@ -80,6 +80,6 @@ function expand_collapse() {
         document.querySelector(".why-me .panel-title").classList.add("collapsed")
         document.querySelector(".skills .panel-title").classList.add("collapsed")
         document.querySelector(".contribution .panel-title").classList.add("collapsed")
-        document.querySelector(".other-stuff .panel-title").classList.add("collapsed")
+        document.querySelector(".personal .panel-title").classList.add("collapsed")
     }  
 }
