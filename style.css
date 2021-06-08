@@ -32,79 +32,100 @@
 
 /* Root Variable Declaration */
 :root {
-  --main-background: #bbd1ea;
+  --main-background: #e5f9ff;
   --main-text-color: #04080f;
-  --panel-one: #dae3e5;
-  --panel-one-hover: #bdcdd0;
+  --panel-one: #ffffff;
+  --panel-one-hover: #e6e6e6;
   --panel-one-text: #04080f;
-  --panel-two: #bbd1ea;
-  --panel-two-hover: #96b8df;
+  --panel-two: #ffffff;
+  --panel-two-hover: #e6e6e6;
   --panel-two-text: #04080f;
-  --panel-three: #a1c6ea;
-  --panel-three-hover: #76abe0;
+  --panel-three: #ffffff;
+  --panel-three-hover: #e6e6e6;
   --panel-three-text: #04080f;
-  --panel-four: #bbd1ea;
-  --panel-four-hover: #96b8df;
+  --panel-four: #ffffff;
+  --panel-four-hover: #e6e6e6;
   --panel-four-text: #04080f;
-  --panel-five: #dae3e5;
-  --panel-five-hover: #bdcdd0;
+  --panel-five: #ffffff;
+  --panel-five-hover: #e6e6e6;
   --panel-five-text: #04080f;
   --footer: #04080f;
-  --footer-text: #dae3e5;
-  --body-font: "Montserrat", sans-serif;
-  --fancy-font: "Caveat", cursive;
+  --footer-text: #e5f9ff;
+  --body-font: "Roboto", sans-serif;
+  --header-font: "Cabin", sans-serif;
+  --title-font: "Kalam", cursive;
+
+  /* 
+  Title:
+  font-family: 'Kalam', cursive;
+
+  Section Header:
+  font-family: 'Montserrat', sans-serif;
+  
+  Body:
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Slab', serif;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Cabin', sans-serif;
+
+
+
+  Rejects:
+  font-family: 'Damion', cursive;
+  font-family: 'Sriracha', cursive;
+  font-family: 'Nothing You Could Do', cursive;
+  font-family: 'Playfair Display', serif;
+  font-family: 'Vollkorn', serif;
+  font-family: 'Kavivanar', cursive;
+*/
 }
 
 /* Global Styles */
 body {
   font-family: var(--body-font);
-  font-family: var(--body-font);
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.5;
   color: var(--main-text-color);
   background-color: var(--main-background);
 }
 
-h1,
+h1 {
+  font-size: 50px;
+  font-family: var(--title-font);
+  font-style: italic;
+  padding-top: 60px;
+}
+
 h2 {
-  font-family: var(--fancy-font);
-  font-weight: 600;
-  margin-left: auto;
-  margin-right: auto;
+  font-size: 30px;
+  font-family: var(--header-font);
+}
+
+h1,
+h2,
+ul {
+  margin: 0 auto;
   max-width: 70%;
 }
 
-h1 {
-  font-size: 60px;
-}
-
-h2 {
-  font-size: 45px;
+h3,
+h4 {
+  max-width: 70%;
 }
 
 h3 {
-  font-size: 25px;
-  font-weight: 600;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 70%;
-  margin-bottom: 20px;
+  font-family: var(--header-font);
+  font-size: 22px;
+  margin: 20px auto;
 }
 
 h4 {
-  font-size: 15px;
   text-decoration: underline;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 70%;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  margin: 20px auto 10px auto;
 }
 
-p,
-ul {
-  margin-left: auto;
-  margin-right: auto;
+p {
+  margin: 10px auto;
   max-width: 70%;
 }
 
@@ -118,11 +139,11 @@ a:hover {
 }
 
 p.first {
-  margin-top: 20px;
+  margin-top: 5px;
 }
 
 p.last {
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 /* Expand/Collapse Button Styling */
@@ -138,7 +159,7 @@ p.last {
   float: right;
   height: 50px;
   width: 90px;
-  margin-top: 14px;
+  margin-top: 7px;
   margin-right: 20px;
   border: 2px solid var(--main-text-color);
   background-color: var(--panel-one);
@@ -165,42 +186,24 @@ p.last {
 }
 
 /* General Panel Styling */
-/* Panel Background */
-.panel {
-  border: none;
-}
-
-/* Panel Headings */
-.panel-heading {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  padding: 0;
-}
 
 /* Panel Title */
 .panel-title {
-  font-size: 45px;
   padding: 15px 0px;
   cursor: pointer;
   max-width: 70%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+  border-block-end: 1px solid var(--panel-one-text);
 }
 
 .panel-title::after {
   content: "-";
-  font-size: 45px;
   float: right;
 }
 
 .panel-title.collapsed::after,
 .panel-title.initial::after {
   content: "+";
-}
-
-/* Panel Body */
-.panel-body {
-  padding: 0;
 }
 
 /* WHY YOU SECTION */
@@ -217,7 +220,6 @@ p.last {
 }
 
 .why-you .panel-heading + .panel-collapse .panel-body {
-  border-top: none;
   background-color: var(--panel-one);
   color: var(--panel-one-text);
 }
@@ -236,7 +238,6 @@ p.last {
 }
 
 .why-me .panel-heading + .panel-collapse .panel-body {
-  border-top: none;
   background-color: var(--panel-two);
   color: var(--panel-two-text);
 }
@@ -255,12 +256,15 @@ p.last {
 }
 
 .skills .panel-heading + .panel-collapse .panel-body {
-  border-top: none;
   background-color: var(--panel-three);
   color: var(--panel-three-text);
 }
 
 /* CONTRIBUTION SECTION */
+.first-heading {
+  margin-top: 5px;
+}
+
 .contribution .panel-title {
   color: var(--panel-four-text);
 }
@@ -274,7 +278,6 @@ p.last {
 }
 
 .contribution .panel-heading + .panel-collapse .panel-body {
-  border-top: none;
   background-color: var(--panel-four);
   color: var(--panel-four-text);
 }
@@ -293,14 +296,18 @@ p.last {
 }
 
 .personal .panel-heading + .panel-collapse .panel-body {
-  border-top: none;
   background-color: var(--panel-five);
   color: var(--panel-five-text);
 }
 
+/* CLOSING */
+.closing h2 {
+  margin-bottom: 20px;
+}
+
 /* Contact Info Styling */
 footer {
-  background: hsl(197, 93%, 9%);
+  background: var(--footer);
   color: var(--footer-text);
 }
 
@@ -317,8 +324,7 @@ footer .content-wrap {
 }
 
 .contact-list li {
-  margin-left: 0;
-  margin-right: 0;
+  margin-left: auto 0;
 }
 
 .contact-list a {
