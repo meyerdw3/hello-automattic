@@ -1,56 +1,10 @@
-/* 
-* COLOR PALETTES
-
-* -- BLUE GRADIENT --
-* hsl(194, 100%, 95%) - blue 1 (intro)
-* hsl(194, 100%, 90%) - blue 2a (why-you)
-* hsl(194, 100%, 85%) - blue 2b (why-you:hover)
-* hsl(194, 100%, 80%) - blue 3a (why-me)
-* hsl(194, 100%, 75%) - blue 3b (why-me:hover)
-* hsl(194, 100%, 70%) - blue 4a (skills)
-* hsl(194, 100%, 65%) - blue 4b (skills:hover)
-* hsl(194, 100%, 60%) - blue 5a (contribution)
-* hsl(194, 100%, 55%) - blue 5b (contribution:hover)
-* hsl(194, 100%, 50%) - blue 6a (personal)
-* hsl(194, 100%, 45%) - blue 6b (personal:hover)
-* hsl(194, 100%, 15%) - blue 1 (footer)
-
-* -- MULTI-PASTEL --
-* #ED6A5A - red-orange
-* #F4F1BB - tan
-* #9BC1BC - blue-gray
-* #E6EBE0 - off-white
-* #36C9C6 - baby blue
-
-* -- MULTI-BLUE --
-* #3C659F - main background
-* #DAE3E5 - light (panel 1 & 5 + main & footer text)
-* #BBD1EA - mid
-* #A1C6EA - dark
-* #04080F - darkest (footer + panel text)
-*/
-
 /* Root Variable Declaration */
 :root {
-  --main-background: #e5f9ff;
-  --main-text-color: #04080f;
-  --panel-one: #ffffff;
-  --panel-one-hover: #e6e6e6;
-  --panel-one-text: #04080f;
-  --panel-two: #ffffff;
-  --panel-two-hover: #e6e6e6;
-  --panel-two-text: #04080f;
-  --panel-three: #ffffff;
-  --panel-three-hover: #e6e6e6;
-  --panel-three-text: #04080f;
-  --panel-four: #ffffff;
-  --panel-four-hover: #e6e6e6;
-  --panel-four-text: #04080f;
-  --panel-five: #ffffff;
-  --panel-five-hover: #e6e6e6;
-  --panel-five-text: #04080f;
-  --footer: #04080f;
-  --footer-text: #e5f9ff;
+  --background: #e2bdfa;
+  --text: #150120;
+  --hover: #d7a5f8;
+  --footer: #0a000f;
+  --footer-text: #f7ecfe;
   --body-font: "Roboto", sans-serif;
   --header-font: "Cabin", sans-serif;
   --title-font: "Kalam", cursive;
@@ -85,8 +39,8 @@ body {
   font-family: var(--body-font);
   font-size: 17px;
   line-height: 1.5;
-  color: var(--main-text-color);
-  background-color: var(--main-background);
+  color: var(--text);
+  background-color: var(--background);
 }
 
 h1 {
@@ -130,7 +84,7 @@ p {
 }
 
 a {
-  color: var(--main-text-color);
+  color: var(--text);
   text-decoration: underline;
 }
 
@@ -139,7 +93,7 @@ a:hover {
 }
 
 p.first {
-  margin-top: 5px;
+  margin-top: 20px;
 }
 
 p.last {
@@ -161,8 +115,8 @@ p.last {
   width: 90px;
   margin-top: 7px;
   margin-right: 20px;
-  border: 2px solid var(--main-text-color);
-  background-color: var(--panel-one);
+  border: 2px solid var(--text);
+  background-color: var(--background);
   cursor: pointer;
   border-radius: 10px;
 
@@ -171,29 +125,27 @@ p.last {
   font-weight: 600;
   font-size: 15px;
   line-height: 1.7rem;
-  color: var(--main-text-color);
+  color: var(--text);
   text-align: center;
 }
 
 #expand_collapse_button:hover {
-  background-color: var(--main-text-color);
-  color: var(--main-background);
+  background-color: var(--text);
+  color: var(--background);
 }
 
 #expand_collapse_button:active {
   background-color: hsla(0, 0%, 0%, 0%);
-  color: var(--main-text-color);
+  color: var(--text);
 }
 
-/* General Panel Styling */
-
-/* Panel Title */
+/* Panel Styling */
 .panel-title {
   padding: 15px 0px;
   cursor: pointer;
   max-width: 70%;
   margin: 0 auto;
-  border-block-end: 1px solid var(--panel-one-text);
+  /* border-block-end: 2px solid var(--text); */
 }
 
 .panel-title::after {
@@ -206,106 +158,20 @@ p.last {
   content: "+";
 }
 
-/* WHY YOU SECTION */
-.why-you .panel-title {
-  color: var(--panel-one-text);
+.panel-heading,
+.panel-body {
+  border-block-end: 2px solid var(--text);
 }
 
-.why-you .panel-heading {
-  background-color: var(--panel-one);
+.panel-heading:hover {
+  background-color: var(--hover);
 }
 
-.why-you .panel-heading:hover {
-  background-color: var(--panel-one-hover);
-}
-
-.why-you .panel-heading + .panel-collapse .panel-body {
-  background-color: var(--panel-one);
-  color: var(--panel-one-text);
-}
-
-/* WHY ME SECTION */
-.why-me .panel-title {
-  color: var(--panel-two-text);
-}
-
-.why-me .panel-heading {
-  background-color: var(--panel-two);
-}
-
-.why-me .panel-heading:hover {
-  background-color: var(--panel-two-hover);
-}
-
-.why-me .panel-heading + .panel-collapse .panel-body {
-  background-color: var(--panel-two);
-  color: var(--panel-two-text);
-}
-
-/* SKILLS SECTION */
-.skills .panel-title {
-  color: var(--panel-three-text);
-}
-
-.skills .panel-heading {
-  background-color: var(--panel-three);
-}
-
-.skills .panel-heading:hover {
-  background-color: var(--panel-three-hover);
-}
-
-.skills .panel-heading + .panel-collapse .panel-body {
-  background-color: var(--panel-three);
-  color: var(--panel-three-text);
-}
-
-/* CONTRIBUTION SECTION */
-.first-heading {
-  margin-top: 5px;
-}
-
-.contribution .panel-title {
-  color: var(--panel-four-text);
-}
-
-.contribution .panel-heading {
-  background-color: var(--panel-four);
-}
-
-.contribution .panel-heading:hover {
-  background-color: var(--panel-four-hover);
-}
-
-.contribution .panel-heading + .panel-collapse .panel-body {
-  background-color: var(--panel-four);
-  color: var(--panel-four-text);
-}
-
-/* PERSONAL NOTE SECTION */
-.personal .panel-title {
-  color: var(--panel-five-text);
-}
-
-.personal .panel-heading {
-  background-color: var(--panel-five);
-}
-
-.personal .panel-heading:hover {
-  background-color: var(--panel-five-hover);
-}
-
-.personal .panel-heading + .panel-collapse .panel-body {
-  background-color: var(--panel-five);
-  color: var(--panel-five-text);
-}
-
-/* CLOSING */
 .closing h2 {
   margin-bottom: 20px;
 }
 
-/* Contact Info Styling */
+/* Footer Styling */
 footer {
   background: var(--footer);
   color: var(--footer-text);
