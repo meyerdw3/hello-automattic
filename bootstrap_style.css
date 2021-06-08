@@ -5983,10 +5983,6 @@ button.list-group-item-danger.active:hover {
 .panel-group .panel + .panel {
   margin-top: 5px;
 }
-.panel-group .panel-heading {
-  border-bottom: 0;
-}
-
 .panel-group .panel-footer {
   border-top: 0;
 }
