@@ -110,9 +110,7 @@ header {
 /* Education
 ---------------------------------*/
 .education {
-  background-image: url(images/edu-background.jpg);
-  background-size: cover;
-  background-position: top right;
+  background-color: #fdd526;
   padding-bottom: 100px;
 }
 
@@ -164,7 +162,7 @@ header {
 /* Contact Info
 ---------------------------------*/
 footer {
-  background: #343434;
+  background: #2f3061;
   color: #f7fff7;
 }
 
@@ -180,7 +178,7 @@ footer h2 {
 .contact-list a {
   padding: 15px;
   display: inline-block;
-  color: #ffe66d;
+  color: #f7fff7;
 }
 
 /* Responsive Styles
