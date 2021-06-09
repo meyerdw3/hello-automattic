@@ -1,37 +1,18 @@
-/* Root Variable Declaration */
+/* Root Variable Declaration
+---------------------------------*/
 :root {
-  --background: #e2bdfa;
-  --text: #150120;
-  --hover: #d7a5f8;
-  --footer: #0a000f;
-  --footer-text: #f7ecfe;
+  /* Colors */
+  --main: #ffe7a3;
+  --main-text: #00203fff;
+  --hover: #00203fff;
+  --hover-text: #ffe7a3;
+  --footer: #00203fff;
+  --footer-text: #ffe7a3;
+
+  /* Fonts */
   --body-font: "Roboto", sans-serif;
   --header-font: "Cabin", sans-serif;
   --title-font: "Kalam", cursive;
-
-  /* 
-  Title:
-  font-family: 'Kalam', cursive;
-
-  Section Header:
-  font-family: 'Montserrat', sans-serif;
-  
-  Body:
-  font-family: 'Roboto', sans-serif;
-  font-family: 'Roboto Slab', serif;
-  font-family: 'Roboto Condensed', sans-serif;
-  font-family: 'Cabin', sans-serif;
-
-
-
-  Rejects:
-  font-family: 'Damion', cursive;
-  font-family: 'Sriracha', cursive;
-  font-family: 'Nothing You Could Do', cursive;
-  font-family: 'Playfair Display', serif;
-  font-family: 'Vollkorn', serif;
-  font-family: 'Kavivanar', cursive;
-*/
 }
 
 /* Global Styles */
@@ -39,8 +20,8 @@ body {
   font-family: var(--body-font);
   font-size: 17px;
   line-height: 1.5;
-  color: var(--text);
-  background-color: var(--background);
+  color: var(--main-text);
+  background-color: var(--main);
 }
 
 h1 {
@@ -51,7 +32,7 @@ h1 {
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 25px;
   font-family: var(--header-font);
 }
 
@@ -84,7 +65,7 @@ p {
 }
 
 a {
-  color: var(--text);
+  color: var(--main-text);
   text-decoration: underline;
 }
 
@@ -100,7 +81,8 @@ p.last {
   margin-bottom: 40px;
 }
 
-/* Expand/Collapse Button Styling */
+/* Expand/Collapse Button Styling
+---------------------------------*/
 #expand_collapse_button {
   /* Sticky */
   position: sticky;
@@ -113,10 +95,10 @@ p.last {
   float: right;
   height: 50px;
   width: 90px;
-  margin-top: 7px;
+  margin-top: 4px;
   margin-right: 20px;
-  border: 2px solid var(--text);
-  background-color: var(--background);
+  border: 2px solid var(--main-text);
+  background-color: var(--main);
   cursor: pointer;
   border-radius: 10px;
 
@@ -125,27 +107,27 @@ p.last {
   font-weight: 600;
   font-size: 15px;
   line-height: 1.7rem;
-  color: var(--text);
+  color: var(--main-text);
   text-align: center;
 }
 
 #expand_collapse_button:hover {
-  background-color: var(--text);
-  color: var(--background);
+  background-color: var(--main-text);
+  color: var(--main);
 }
 
 #expand_collapse_button:active {
   background-color: hsla(0, 0%, 0%, 0%);
-  color: var(--text);
+  color: var(--main-text);
 }
 
-/* Panel Styling */
+/* Panel Styling
+---------------------------------*/
 .panel-title {
   padding: 15px 0px;
   cursor: pointer;
   max-width: 70%;
   margin: 0 auto;
-  /* border-block-end: 2px solid var(--text); */
 }
 
 .panel-title::after {
@@ -160,18 +142,24 @@ p.last {
 
 .panel-heading,
 .panel-body {
-  border-block-end: 2px solid var(--text);
+  border-block-end: 2px solid var(--main-text);
 }
 
 .panel-heading:hover {
   background-color: var(--hover);
+  color: var(--hover-text);
 }
 
 .closing h2 {
+  font-family: "Kalam", cursive;
+  font-size: 50px;
+  font-style: italic;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 
-/* Footer Styling */
+/* Footer Styling
+---------------------------------*/
 footer {
   background: var(--footer);
   color: var(--footer-text);
@@ -204,7 +192,8 @@ footer .content-wrap {
   text-decoration: none;
 }
 
-/* Media Queries */
+/* Media Queries
+---------------------------------*/
 @media screen and (min-width: 750px) {
   footer {
     text-align: center;
